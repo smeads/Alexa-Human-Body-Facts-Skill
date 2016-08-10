@@ -41,7 +41,7 @@ var FACTS = [
     "The fastest growing nail is on the middle finger.",
     "There are as many hairs per square inch on your body as a chimpanzee.",
     "Blondes have more hair.",
-    "Fingernails grow nearly 4 times faster than toenails."<
+    "Fingernails grow nearly 4 times faster than toenails.",
     "The lifespan of a human hair is 3 to 7 years on average.",
     "You must lose over 50% of your scalp hairs before it is apparent to anyone.",
     "Human hair is virtually indestructible, aside from it's fammability.",
@@ -120,8 +120,6 @@ var FACTS = [
     "The chemical elements that make up your body are worth around U.S. $160.",
     "Your taste buds are replaced every 10 days.",
     "Your lungs can hold up to 5 minutes worth of oxygen.",
-
-
 ];
 
 /**
