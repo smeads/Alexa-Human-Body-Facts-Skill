@@ -11,8 +11,8 @@
  *
  * Examples:
  * One-shot model:
- *  User: "Alexa, ask Space Geek for a space fact"
- *  Alexa: "Here's your space fact: ..."
+ *  User: "Alexa, ask Human Body Geek for a human body fact"
+ *  Alexa: "Here's your human body fact: ..."
  */
 
 /**
@@ -88,7 +88,39 @@ var FACTS = [
     "Over 90% of diseases are caused or complicated by stress.",
     "A human head remains conscious for about 15 to 20 seconds after it has been decapitated.",
     "It takes 17 muscles to smile and 43 to frown.",
-    "Babies are born with 300 bones, but by adulthood they number is reduced to 206.",
+    "Babies are born with 300 bones, but by adulthood the number is reduced to 206.",
+    "We are about 1 centimeter taller in the morning than in the evening.",
+    "The strongest muscle in the human body is the masseter jaw muscle.",
+    "The hardest bone in the human body is the jawbone.",
+    "You use 200 muscles to take one step.",
+    "The tooth is the only part of the human body that can't repair itself.",
+    "The feet account for one quarter of all the human body's bones.",
+    "About 32 million bacteria call every inch of your skin home.",
+    "Humans shed and regrow outer skin cells about every 27 days.",
+    "Three hundred million cells die in the human body every minute.",
+    "Humans shed about 600,000 particles of skin every hour.",
+    "Every day an adult body produces 300 billion new cells.",
+    "Every tongue print is unique.",
+    "Your body has enough iron in it to make a naiil 3 inches long.",
+    "The most common blood type in the world is Type O.",
+    "Human lips have a reddish color because of the great concentration of tiny capillaries just below the skin.",
+    "The human eye is so sensitive that if the Earth were flat, you could spot a candle flickering at night from up to 30 miles away.",
+    "When you blush, the lining of your stomach blushes too.",
+    "A full head of human hair is stong enough to support 12 tons.",
+    "The human body gives off enough heat to bring a half gallon of water to a boil in 30 minutes.",
+    "If the human brain were a computer, it could perform 38 thousand-trillion operations per second.",
+    "The human eye can distinguish about 10 million different colors.",
+    "If the human eye was a digital camera it would have 576 megapixels.",
+    "There are more bacteria in your mouth than people in the world.",
+    "Every day your heart creates enough energy to drive a truck for 20 miles.",
+    "If uncoiled, the DNA in all the cells in your body would stretch 10 billion miles, from here to Pluto and back.",
+    "In a lifetime, your brain's longterm memory can hold as many as 1 quadrillion seperate bits of information.",
+    "The gastrointestinal tract is a 30 foot tube running from your mouth to your anus.",
+    "Your heart will pump nearly 1.5 million barrels of blood during your lifetime, enough to fill 200 train tank cars.",
+    "The chemical elements that make up your body are worth around U.S. $160.",
+    "Your taste buds are replaced every 10 days.",
+    "Your lungs can hold up to 5 minutes worth of oxygen.",
+
 
 ];
 
@@ -98,7 +130,7 @@ var FACTS = [
 var AlexaSkill = require('./AlexaSkill');
 
 /**
- * SpaceGeek is a child of AlexaSkill.
+ * Human Body Geek is a child of AlexaSkill.
  * To read more about inheritance in JavaScript, see the link below.
  *
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#Inheritance
@@ -135,7 +167,7 @@ Fact.prototype.intentHandlers = {
     },
 
     "AMAZON.HelpIntent": function (intent, session, response) {
-        response.ask("You can say tell me a space fact, or, you can say exit... What can I help you with?", "What can I help you with?");
+        response.ask("You can say tell me a human body fact, or, you can say exit... What can I help you with?", "What can I help you with?");
     },
 
     "AMAZON.StopIntent": function (intent, session, response) {
@@ -153,7 +185,7 @@ Fact.prototype.intentHandlers = {
  * Gets a random new fact from the list and returns to the user.
  */
 function handleNewFactRequest(response) {
-    // Get a random space fact from the space facts list
+    // Get a random human body fact from the human body facts list
     var factIndex = Math.floor(Math.random() * FACTS.length);
     var randomFact = FACTS[factIndex];
 
@@ -165,7 +197,7 @@ function handleNewFactRequest(response) {
 
 // Create the handler that responds to the Alexa Request.
 exports.handler = function (event, context) {
-    // Create an instance of the SpaceGeek skill.
+    // Create an instance of the Human Body Geek skill.
     var fact = new Fact();
     fact.execute(event, context);
 };
